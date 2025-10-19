@@ -1,0 +1,200 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.upperHeader{
+    background-color: #81181C;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header{
+    height: 100px;
+    background-color: white;
+    font-size: 0.7rem;
+    color: #81181C;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+    margin-left: 40px;
+}
+
+.header img{
+    height: 80px;
+    width: auto;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    padding-right: 80px;
+}
+
+.apply{
+      border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    width: 240px;
+    height: 50px;
+    font-size: 1.1rem;
+    background-color: #FAB714;
+    cursor: pointer;
+}
+
+.portal{
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 240px;
+    height: 50px;
+     font-size: 1.1rem;
+    background-color: #81181C;
+    color: white;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+   
+}
+
+.nav{
+    background-color: #81181C;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 1rem;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+    
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #81181C;
+  font-weight: 800;
+  border: none;
+  font-size: 3rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+    border-radius: 5px;
+}
+button.prev { left: 30px; }
+button.next { right: 30px; }
+
+
+.academic{
+    padding: 60px 80px;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #81181C;
+    font-size: 2rem;
+    text-align: center;
+}
+.academic P{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: black;
+     font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 200;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    height: 700px;
+}
+.card{
+    width: 500px;
+    height: 720px;
+    background-color: #ebeaeaa0;
+    border-radius: 15px;
+}
+.card img{
+    width: 100%;
+    height: 500px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+
+.card h1{
+    font-size: 2rem;
+    margin: 10px;
+    margin-bottom: 5px;
+}
+.card p{
+    font-size: 1.1rem;
+    margin: 0 10px;
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 200;
+}
+
+.learn{
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+     border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 240px;
+    height: 40px;
+     font-size: 1.1rem;
+    background-color: #81181C;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}

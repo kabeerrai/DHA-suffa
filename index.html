@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHA SUFFA UNIVERSITY </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="upperHeader">Learn To Discover</div>
+    <div class="header">
+
+        <a href="index.html">
+        <div class="logo">
+            <img src="assets/suffa_logo.png" alt="logo">
+            <h1>DHA SUFFA UNIVERSITY</h1>
+        </div>
+        </a>
+
+        <div class="buttons">
+            <button class="apply">
+                Apply For Admission
+            </button>
+
+            <button class="portal">
+                Portals
+            </button>
+        </div>
+
+    </div>
+    <div class="nav">
+       <li>
+        <ul><a href="">About</a></ul>
+        <ul><a href="">Academics</a></ul>
+        <ul><a href="">Admissions</a></ul>
+        <ul><a href="">Faculty</a></ul>
+        <ul><a href="">Life At DSU</a></ul>
+        <ul><a href="">Directorates</a></ul>
+        <ul><a href="">Alumni</a></ul>
+        <ul><a href="">QEC</a></ul>
+        <ul><a href="">Research Journals</a></ul>
+       </li>
+    </div>
+
+    <div class="hero">
+  <div class="slides">
+    <img src="assets/icisct-25-4-1024x683.jpg" class="slide active">
+    <img src="assets/conference-beginning-by-national-anthum-1024x683.jpg" class="slide">
+    <img src="assets/image3.jpg" class="slide">
+  </div>
+  <button class="prev">‹</button>
+  <button class="next">›</button>
+</div>
+
+
+<div class="academic">
+    <h1>ACADEMIC PROGRAMS</h1>
+    <P>DHA Suffa University offers Undergraduate, Master and Doctoral programs in Engineering, Management Sciences, Humanities and Social Sciences, Computer Science and newly launched programs BS Business Analytics & Programming, BS Computational & Industrial Mathematics, BS Accounting & Finance, BS Software Engineering, BS Data Sciences, BE Civil Engineering, BS International Relations, BS English & BS Psychology</P>
+
+    <div class="cards">
+        <div class="card">
+            <img src="assets/undergraduate.webp" alt="">
+            <h1>UNDERGRADUATE</h1>
+            <p>Build a strong academic foundation with hands-on learning across engineering, tech, and social sciences.</p>
+            <button class="learn"><a href="">Learn More</a></button>
+        </div>
+
+        <div class="card">
+            <img src="assets/masterss.avif" alt="">
+            <h1>MASTERS</h1>
+            <p>Advance your expertise through specialized coursework, research, and industry-driven graduate programs.</p>
+            <button class="learn"><a href="">Learn More</a></button>
+        </div>
+
+        <div class="card">
+            <img src="assets/doctoral.jpeg" alt="">
+            <h1>DOCTORAL</h1>
+            <p>Lead original research and shape the future through rigorous PhD programs and global collaboration.</p>
+            <button class="learn"><a href="">Learn More</a></button>
+        </div>
+    </div>
+
+</div>
+
+    <script>
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  // Auto-slide every 5 seconds
+  setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>
