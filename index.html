@@ -87,6 +87,78 @@
 
 </div>
 
+<div class="bythenumber">
+  <div class="text">
+<h1>DHA SUFFA</h1>
+<h1>BY THE NUMBERS</h1>
+</div>
+   <div class="cards">
+        <div class="card2" data-aos="fade-up" data-aos-delay="100">
+            <div class="circle">
+              <img src="assets/Square academic cap.svg" alt="">
+            </div>
+            <div class="text2">
+             <h1 class="counter" data-target="2000">2000+</h1>
+             <p>Students Enrolled</p>
+             </div>
+        </div>
+
+        <div class="card2" data-aos="fade-up" data-aos-delay="200">
+           <div class="circle">
+             <img src="assets/Group 1003.svg" alt="" style="height: 70px;">
+            </div>
+            <div class="text2">
+             <h1  class="counter" data-target="16">16+</h1>
+             <p>Distinct Degrees</p>
+             </div>
+        </div>
+
+        <div class="card2" data-aos="fade-up" data-aos-delay="300">
+          <div class="circle">
+               <img src="assets/Vector.svg" alt="". style="height: 70px;">
+            </div>
+            <div class="text2">
+            <h1 class="counter" data-target="200">200+</h1>
+            <p>World-Class Facility</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="explore" data-aos="fade-up" data-aos-delay="200">
+  <h1>Explore Our Campuses</h1>
+  <div class="cards2".  data-aos="fade-up" data-aos-delay="300">
+    <div class="card3">
+      <img src="assets/dsu main.jpeg" alt="" class="image">
+      <div class="text3">
+            <h1>Main Campus - Karachi</h1>
+              <div class="location">
+            <img src="assets/pin.svg" alt="" class="icon">
+            <p>Ph-VII، DG-78, Off Khayaban-e-Tufail،       Ext, Phase 7 Ext Karachi</p>
+          </div>
+      </div>
+      <button class="learn"><a href="">Learn More</a></button>
+    </div>
+
+
+    <div class="card3">
+      <img src="assets/dck campus.jpeg" alt="". class="image">
+      <div class="text3">
+          <h1>DCK Campus - Karachi</h1>
+
+
+          <div class="location">
+            <img src="assets/pin.svg" alt="" class="icon">
+            <p>2F65+28W, Main Road, Central Business District Cbd Dha City, Karachi</p>
+          </div>
+      </div>
+      <button class="learn"><a href="">Learn More</a></button>
+    </div>
+
+  </div>
+</div>
+
     <script>
   const slides = document.querySelectorAll('.slide');
   const nextBtn = document.querySelector('.next');
@@ -120,9 +192,43 @@
 <script>
   AOS.init({
     duration: 800, // animation duration in ms
-    once: false     // animate only once
+    once: true     // animate only once
   });
 </script>
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCount = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const speed = 150;
+    const increment = target / speed;
+    let count = 0;
+
+  const update = () => {
+    count += increment;
+    if (count < target) {
+      counter.innerText = Math.ceil(count) + '+';
+      requestAnimationFrame(update);
+    } else {
+      counter.innerText = target + '+';
+    }
+  };
+
+  update();
+};
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+</script>
+
 
 
 </body>
