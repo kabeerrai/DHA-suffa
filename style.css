@@ -528,36 +528,34 @@ button.prev1, button.next1 {
 
 .tabs-wrapper {
     margin-top: 30px;
-  display: flex;
-  align-items: center;
-  width: 80%;
-  overflow: hidden; /* hide overflow so only 3 show */
-  position: relative;
- 
+    display: flex;
+    align-items: center;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
 }
 
 .tabs {
-  display: flex;
-  gap: 20px;
-
-  overflow-x: auto; /* allow horizontal scroll */
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  margin-left: 20px;
-  margin-right: 9px; / /* Firefox hide scrollbar */
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .tabs::-webkit-scrollbar {
-  display: none; /* Chrome/Safari hide scrollbar */
+    display: none;
 }
 
 .tab {
-  flex: 0 0 calc(33.333% - 20px); /* 3 tabs per row */
-  max-width: calc(33.333% - 20px);
-  min-width: calc(33.333% - 20px);
-  background-color: white;
-  border-radius: 15px;
-  height: 500px;
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    min-width: calc(33.333% - 20px);
+    background-color: white;
+    border-radius: 15px;
+    height: 500px;
 }
 
 
@@ -569,7 +567,6 @@ button.prev1, button.next1 {
     border-top-right-radius: 10px;
     background-color: white;
     border: none;
-    
 }
 
 .title{
@@ -580,7 +577,6 @@ button.prev1, button.next1 {
     font-family: poppins;
     margin-top: 20px;
     font-weight: 200;
-
 }
 
 .showall{
@@ -607,84 +603,73 @@ button.prev1, button.next1 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
-    h1{
-        font-size: 3rem;
-        color: #81181C;
-    }
 }
+
+.insidedsu h1{
+    font-size: 3rem;
+    color: #81181C;
+}
+
 .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* keeps it from stretching too wide */
-  aspect-ratio: 16 / 9; /* responsive video ratio */
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
 }
 
-/* All iframes stacked, only the active one visible */
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  pointer-events: none; /* prevent clicks when hidden */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
 }
 
 .video-container iframe.active {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
-/* Circle navigation */
+
 .circle-nav {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 10px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .circle-btn {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-/* Colors */
-.circle-btn {
-  background-color: #f4c2c2; /* pale rose */
-}
-
-/* Hover effect */
-.circle-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-}
-
-/* Active state (highlight current video) */
-.circle-btn.active {
-  background-color: #5c0f12; /* darker maroon */
-}
-
-.circle-btn.active {
-  transform: scale(1.2);
-  
-}
-
-/* Responsive tweak for smaller screens */
-@media (max-width: 600px) {
-  .circle-btn {
     width: 20px;
     height: 20px;
-  }
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #f4c2c2;
+}
+
+.circle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.circle-btn.active {
+    background-color: #5c0f12;
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+    .circle-btn {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 
@@ -891,6 +876,46 @@ button.prev1, button.next1 {
     .image{
         height: 300px;
     }
+    
+    .dsutoday{
+        height: auto;
+        min-height: 850px;
+        padding-bottom: 50px;
+    }
+    
+    .text5{
+        padding: 0 20px;
+    }
+    
+    .text5 p{
+        max-width: 100%;
+    }
+    
+    .tabs-wrapper{
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .tabs{
+        scroll-snap-type: x mandatory;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .tab{
+        min-width: 85%;
+        flex: 0 0 85%;
+        max-width: 85%;
+        scroll-snap-align: center;
+    }
+    
+    button.prev1, button.next1{
+        display: none;
+    }
+    
+    .insidedsu{
+        width: 90%;
+    }
 }
 
 /* Small mobile devices */
@@ -1015,5 +1040,84 @@ button.prev1, button.next1 {
     
     .location img{
         height: 20px;
+    }
+    
+    .dsutoday{
+        min-height: auto;
+        padding: 30px 10px 40px;
+    }
+    
+    .text5{
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+    
+    .text5 p{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    .tabs-wrapper{
+        width: 100%;
+        padding: 0 5px;
+        margin-top: 20px;
+    }
+    
+    .tabs{
+        margin-left: 5px;
+        margin-right: 5px;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        padding: 0 5px;
+    }
+    
+    .tab{
+        min-width: 90%;
+        flex: 0 0 90%;
+        max-width: 90%;
+        height: 450px;
+        scroll-snap-align: center;
+    }
+    
+    button.prev1, button.next1{
+        display: none;
+    }
+    
+    .image1{
+        height: 320px;
+    }
+    
+    .title{
+        font-size: 1rem;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+    
+    .showall{
+        width: 250px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-top: 25px;
+    }
+    
+    .insidedsu{
+        width: 90%;
+        margin: 50px auto;
+        gap: 15px;
+    }
+    
+    .insidedsu h1{
+        font-size: 2rem;
+    }
+    
+    .video-container{
+        max-width: 100%;
+        margin: 15px auto;
+    }
+    
+    .circle-nav{
+        gap: 15px;
+        margin: 15px 0;
     }
 }
