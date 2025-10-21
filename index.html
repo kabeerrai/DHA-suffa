@@ -48,6 +48,7 @@
             <ul><a href="">Alumni</a></ul>
             <ul><a href="">QEC</a></ul>
             <ul><a href="">Research Journals</a></ul>
+            <ul><a href="">Portals</a></ul>
         </li>
     </div>
 
@@ -179,6 +180,115 @@
         </div>
     </div>
 
+    <div class="dsutoday">
+        <div class="text5">
+            <h1>DSU Today</h1>
+            <p>Latest News From DHA Suffa University</p>
+        </div>
+
+
+        <div class="tabs-wrapper">
+             <button class="prev1">‹</button>
+        <div class="tabs">
+
+             
+            <div class="tab1 tab">
+                <a href="">
+                <img src="https://www.dsu.edu.pk/wp-content/uploads/2025/07/grant-final-evalution-of-FYP-1024x1024.jpg" alt="" class="image1">
+
+                    <div class="title">
+                        <span>Final Year Project Exhibition – July 22, 2025</span>
+                    </div>
+                </a>
+            </div>
+            <div class="tab2 tab">
+                <a href="">
+                <img src="https://www.dsu.edu.pk/wp-content/uploads/2025/06/FYP-Guidance-Session-1024x683.jpg"  alt=""class="image1">
+
+                    <div class="title">
+                        <span>FYP Guidance Session
+ – June 19, 2025</span>
+                    </div>
+                </a>
+            </div>
+            <div class="tab3 tab">
+                <a href="">
+                <img src="https://www.dsu.edu.pk/wp-content/uploads/2025/06/Preparing-and-Driving-Digital-Transformation.jpg" alt="" class="image1">
+
+                    <div class="title">
+                        <span>Preparing and Driving Digital Transformation– June 17, 2025</span>
+                    </div>
+                </a>
+            </div>
+
+             <div class="tab1 tab">
+                <a href="">
+                <img src="https://www.dsu.edu.pk/wp-content/uploads/2025/07/grant-final-evalution-of-FYP-1024x1024.jpg" alt="" class="image1">
+
+                    <div class="title">
+                        <span>Final Year Project Exhibition – July 22, 2025</span>
+                    </div>
+                </a>
+            </div>
+            <div class="tab2 tab">
+                <a href="">
+                <img src="https://www.dsu.edu.pk/wp-content/uploads/2025/06/FYP-Guidance-Session-1024x683.jpg"  alt=""class="image1">
+
+                    <div class="title">
+                        <span>FYP Guidance Session
+ – June 19, 2025</span>
+                    </div>
+                </a>
+            </div>
+            <div class="tab3 tab">
+                <a href="">
+                <img src="https://www.dsu.edu.pk/wp-content/uploads/2025/06/Preparing-and-Driving-Digital-Transformation.jpg" alt="" class="image1">
+
+                    <div class="title">
+                        <span>Preparing and Driving Digital Transformation– June 17, 2025</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <button class="next1">›</button>
+
+        </div>
+        <button class="showall">Show All</button>
+    </div>
+
+
+
+<div class="insidedsu" data-aos="fade-left" data-aos-delay="200">
+  <h1>Inside DHA Suffa</h1>
+
+  <div class="video-container">
+    <iframe
+      src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/DHA-Suffa-University-Promo.mp4"
+      title="Promo Video 1"
+      frameborder="0"
+      allowfullscreen
+      id="video1"
+      class="active"
+    ></iframe>
+
+    <iframe
+      src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/Highlights-Career-Fair-DSU.mp4"
+      title="Promo Video 2"
+      frameborder="0"
+      allowfullscreen
+      id="video2"
+    ></iframe>
+  </div>
+
+  <div class="circle-nav">
+    <button class="circle-btn light active" data-target="#video1"></button>
+    <button class="circle-btn dark" data-target="#video2"></button>
+  </div>
+</div>
+
+
     <script>
         // Hero Slider
         const slides = document.querySelectorAll('.slide');
@@ -303,6 +413,58 @@
 
         counters.forEach(counter => observer.observe(counter));
     </script>
+
+<script>
+  const tabsContainer = document.querySelector('.tabs');
+  const nextBtn1 = document.querySelector('.next1');
+  const prevBtn1 = document.querySelector('.prev1');
+
+  const tabWidth = tabsContainer.querySelector('.tab').offsetWidth + 20; // width + gap
+
+  function scrollNext() {
+    if (tabsContainer.scrollLeft + tabsContainer.offsetWidth >= tabsContainer.scrollWidth) {
+      // If at the end, jump back to start
+      tabsContainer.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      tabsContainer.scrollBy({ left: tabWidth, behavior: 'smooth' });
+    }
+  }
+
+  function scrollPrev() {
+    if (tabsContainer.scrollLeft === 0) {
+      // If at the start, jump to the end
+      tabsContainer.scrollTo({ left: tabsContainer.scrollWidth, behavior: 'smooth' });
+    } else {
+      tabsContainer.scrollBy({ left: -tabWidth, behavior: 'smooth' });
+    }
+  }
+
+  nextBtn1.addEventListener('click', scrollNext);
+  prevBtn1.addEventListener('click', scrollPrev);
+
+  // Auto-scroll every 5s
+  setInterval(scrollNext, 5000);
+</script>
+
+<script>
+  const buttons = document.querySelectorAll('.circle-btn');
+  const videos = document.querySelectorAll('.video-container iframe');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+
+      // Remove active from all videos and buttons
+      videos.forEach(v => v.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
+
+      // Add active to the clicked button and its video
+      btn.classList.add('active');
+      document.querySelector(target).classList.add('active');
+    });
+  });
+</script>
+
 </body>
 </html>
     
