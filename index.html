@@ -288,6 +288,136 @@
   </div>
 </div>
 
+    <div class="testimonials">
+        <h1>TESTIMONIALS</h1>
+
+        <div class="testimonials-wrapper">
+             <button class="prev2">‹</button>
+        <div class="testimonials-tabs">
+
+                <div class="testimonial-tab clone">
+                    <div class="info">
+                    <img src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/NAME-02.png" alt="">
+                    <p class="name1">Aris Makinoja</p>
+                    <p class="job">AutoExpert</p>
+                    </div>
+                    <p class="review">
+                        "DHA Suffa University provided me with an exceptional education and a supportive community. The faculty's dedication to student success is unparalleled."
+                    </p>
+                </div>
+                
+                <div class="testimonial-tab">
+                <div class="info">
+                    <img src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/46.jpg" alt="">
+                    <p class="name1">Sara Ahmed</p>
+                    <p class="job">Data Analyst</p>
+                </div>
+                <p class="review">
+                    "DSU's vibrant campus life and diverse student body enriched my university experience. I made lifelong friends and unforgettable memories."
+                </p>
+                </div>
+
+                <div class="testimonial-tab">
+                <div class="info">
+                    <img src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/47-1-1-1-e1721376207655.jpg" alt="">
+                    <p class="name1">Omar Ali</p>
+                    <p class="job">Software Engineer</p>
+                </div>
+                <p class="review">
+                    "The hands-on learning approach at DSU prepared me for real-world challenges. The internships and projects were invaluable to my career growth."
+                </p>
+                </div>
+
+                <div class="testimonial-tab">
+                <div class="info">
+                    <img src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/32-1-1.png" alt="">
+                    <p class="name1">Aisha Khan</p>
+                    <p class="job">Marketing Strategist</p>
+                </div>
+                <p class="review">
+                    "DHA Suffa University provided me with the tools and confidence to excel in a competitive industry. The faculty's mentorship was a game-changer."
+                </p>
+                </div>
+
+                <div class="testimonial-tab clone">
+                    <div class="info">
+                    <img src="https://www.dsu.edu.pk/wp-content/uploads/2024/07/NAME-02.png" alt="">
+                    <p class="name1">Aris Makinoja</p>
+                    <p class="job">AutoExpert</p>
+                    </div>
+                    <p class="review">
+                        "DHA Suffa University provided me with an exceptional education and a supportive community. The faculty's dedication to student success is unparalleled."
+                    </p>
+                </div>
+           
+        </div>
+
+        <button class="next2">›</button>
+
+        </div>
+        <button class="showall">Show All</button>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabsContainer2 = document.querySelector('.testimonials-tabs');
+  const nextBtn2 = document.querySelector('.next2');
+  const prevBtn2 = document.querySelector('.prev2');
+  const tabs2 = tabsContainer2.querySelectorAll('.testimonial-tab');
+  const tabWidth2 = tabs2[0].offsetWidth;
+
+  let currentIndex2 = 1; // Start at first real slide (after clone)
+  const totalTabs2 = tabs2.length;
+
+  // Initial scroll to first real slide
+  tabsContainer2.scrollLeft = tabWidth2;
+
+  function scrollToIndex2(index2) {
+    tabsContainer2.scrollTo({
+      left: index2 * tabWidth2,
+      behavior: 'smooth'
+    });
+    currentIndex2 = index2;
+  }
+
+  nextBtn2.addEventListener('click', () => {
+    scrollToIndex2(currentIndex2 + 1);
+  });
+
+  prevBtn2.addEventListener('click', () => {
+    scrollToIndex2(currentIndex2 - 1);
+  });
+
+  // Looping logic on scroll end
+  tabsContainer2.addEventListener('scroll', () => {
+    const scrollLeft2 = tabsContainer2.scrollLeft;
+    currentIndex2 = Math.round(scrollLeft2 / tabWidth2);
+
+    // If at clone of first (end), jump to real first
+    if (currentIndex2 === totalTabs2 - 1) {
+      setTimeout(() => {
+        tabsContainer2.scrollTo({ left: tabWidth2, behavior: 'auto' });
+        currentIndex2 = 1;
+      }, 300);
+    }
+
+    // If at clone of last (start), jump to real last
+    if (currentIndex2 === 0) {
+      setTimeout(() => {
+        tabsContainer2.scrollTo({ left: (totalTabs2 - 2) * tabWidth2, behavior: 'auto' });
+        currentIndex2 = totalTabs2 - 2;
+      }, 300);
+    }
+  });
+
+  // Auto-scroll every 6 seconds
+  setInterval(() => {
+    scrollToIndex2(currentIndex2 + 1);
+  }, 6000);
+});
+</script>
+
+
 
     <script>
         // Hero Slider
